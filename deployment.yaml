@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: sample-app
-          image: gcr.io/xyz-finer-elephant/sample-app:v1
+          image: nginx
           resources:
             requests:
               memory: "64Mi"

@@ -274,7 +274,7 @@ rules:
 ---
 # TODO(pintohutch): bump to autoscaling/v2 when 1.23 is the default in the GKE
 # stable release channel.
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: kube-state-metrics
@@ -299,9 +299,9 @@ spec:
       - type: Pods
         value: 1
         # Under-utilization needs to persist for `periodSeconds` before any action can be taken.
-        # Current supported max from https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2beta2/.
+        # Current supported max from https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2/.
         periodSeconds: 1800
-      # Current supported max from https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2beta2/.
+      # Current supported max from https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/horizontal-pod-autoscaler-v2/.
       stabilizationWindowSeconds: 3600
 ---
 apiVersion: monitoring.googleapis.com/v1
