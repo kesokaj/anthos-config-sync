@@ -7,4 +7,4 @@ metadata:
 collection:
   compression: gzip
   kubeletScraping:
-    interval: 30s
+    interval: 60s
